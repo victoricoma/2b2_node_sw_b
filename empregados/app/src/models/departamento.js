@@ -16,7 +16,10 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Departamento.associate = (models) => {
-        Departamento.hasMany(models.Empregado, { foreignKey: 'cod_depto', as: 'empregados' });
+        Departamento.hasMany(models.Empregado, {
+            foreignKey: 'cod_depto',
+            as: 'empregados'
+        });
     };
     return Departamento;
 };
